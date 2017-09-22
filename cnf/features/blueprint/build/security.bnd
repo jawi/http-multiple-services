@@ -1,0 +1,8 @@
+# TODO doc
+-buildpath.blueprint-security: \
+  org.amdatu.security.account.admin.api;version=latest,\
+  org.amdatu.security.authentication.authservice.api;version=latest,\
+  org.amdatu.security.authentication.idprovider.api;version=latest,\
+  org.amdatu.security.password.hash.api;version=latest,\
+  org.amdatu.security.password.util;version=latest,\
+  org.amdatu.security.tokenprovider.api;version=latest

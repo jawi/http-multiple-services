@@ -1,0 +1,6 @@
+-pluginpath.101.dm: \
+  ${build}/plugins/org.apache.felix.dependencymanager.annotation-4.2.1.jar
+
+-plugin.101.dm: org.apache.felix.dm.annotation.plugin.bnd.AnnotationPlugin; \
+  build-import-export-service=false; \
+  add-require-capability=true

@@ -1,0 +1,5 @@
+-plugin.1.AmdatuBlueprint: \
+  aQute.bnd.repository.osgi.OSGiRepository; \
+        name='AmdatuBlueprint'; \
+        locations=https://bitbucket.org/amdatulabs/blueprint/raw/master/repo/index.xml.gz; \
+        poll.time=-1

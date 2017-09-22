@@ -1,0 +1,7 @@
+-include: \
+  ${features}/blueprint/build/base.bnd,\
+  ${features}/blueprint/build/web.bnd,\
+
+Private-Package: \
+  nl.lxtreme.admin.http,\
+  nl.lxtreme.admin.rest

@@ -1,0 +1,9 @@
+-buildpath.blueprint-base: \
+  org.apache.felix.dependencymanager.annotation;version=latest,\
+  org.apache.felix.dependencymanager;version=latest,\
+  org.osgi.service.cm;version=latest,\
+  org.osgi.service.event;version=latest,\
+  org.osgi.service.log;version=latest,\
+  org.osgi.service.useradmin;version=latest,\
+  osgi.annotation;version=latest,\
+  osgi.core;version=latest

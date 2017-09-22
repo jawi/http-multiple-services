@@ -1,0 +1,15 @@
+# TODO document
+-runbundles.blueprint-security: \
+  org.amdatu.security.account.admin;version=latest,\
+  org.amdatu.security.account.admin.rest;version=latest,\
+  org.amdatu.security.authentication.authservice.impl;version=latest,\
+  org.amdatu.security.authentication.authservice.rest;version=latest,\
+  org.amdatu.security.authentication.idprovider.local;version=latest,\
+  org.amdatu.security.authentication.idprovider.openidconnect;version=latest,\
+  org.amdatu.security.password.hash.pbkdf2;version=latest,\
+  org.amdatu.security.password.util;version=latest,\
+  org.amdatu.security.tokenprovider.http;version=latest,\
+  org.amdatu.security.tokenprovider.jwt;version=latest
+
+# FIXME We can not deploy these by default..
+# org.amdatu.security.authentication.authservice.login.resource;version=latest

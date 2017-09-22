@@ -1,0 +1,28 @@
+# TODO document
+
+# Set testing flag for other features
+blueprint-testing: true
+
+-runbundles.blueprint-testing: \
+  org.amdatu.testing.configurator;version=latest,\
+  org.apache.servicemix.bundles.junit;version="[4.11,5)",\
+  org.mockito.mockito-core;version="[2,3)",\
+  org.objenesis;version="[2.1,3)",\
+  net.bytebuddy.byte-buddy;version=latest,\
+  net.bytebuddy.byte-buddy-agent;version=latest
+
+-runproperties.blueprint-testing: \
+  org.ops4j.pax.logging.DefaultServiceLog.level=DEBUG,\
+  felix.cm.loglevel=4
+
+-runsystempackages.blueprint-testing: \
+  sun.misc, sun.reflect
+
+# Clear out releaserepo and baseling for integration test projects
+# TODO bramk: Determine if this is the right place or that we should
+# make a more explicit distinction between unit and integration testing
+-releaserepo:
+-baseline:
+
+# Discover and run all test cases annotated with the @RunWith annotation
+Test-Cases: ${classes;CONCRETE;ANNOTATED;org.junit.runner.RunWith}

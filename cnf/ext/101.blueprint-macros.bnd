@@ -1,0 +1,12 @@
+# TODO doc
+
+# Configure include shorthand for features
+features: ${workspace}/cnf/features
+
+# Placeholder empty key used for optional includes 
+blueprint-empty-key: 
+isIncluded: ${if;${apply;size;${def;${1}}}}
+# Check if a build / run feature is inculded and return the property to include
+# Args: 1 - feature name, 2 - key to return if the feature is included
+ifBuildFeature: ${if;${isIncluded;-buildpath.${1}};${2};blueprint-empty-key}
+ifRunFeature: ${if;${isIncluded;-runbundles.${1}};${2};blueprint-empty-key}

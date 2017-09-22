@@ -1,0 +1,12 @@
+# Default features (turned on for all projects)  
+-include: \
+  ${workspace}/cnf/features/blueprint/build/base.bnd
+
+# Repository for additional dependencies in a project
+-plugin.1.ProjectDependencies: \
+  aQute.bnd.repository.maven.provider.MavenBndRepository; \
+        releaseUrl=https://repo.maven.apache.org/maven2/; \
+        index=${build}/dependencies.maven; \
+        name=Project dependencies
+        
+#-baseline: *

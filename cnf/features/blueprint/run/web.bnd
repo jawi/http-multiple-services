@@ -1,0 +1,23 @@
+# TODO document
+-runbundles.blueprint-web: \
+  com.fasterxml.jackson.core.jackson-annotations;version=latest,\
+  com.fasterxml.jackson.core.jackson-core;version=latest,\
+  com.fasterxml.jackson.core.jackson-databind;version=latest,\
+  com.fasterxml.jackson.jaxrs.jackson-jaxrs-base;version=latest,\
+  com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider;version=latest,\
+  org.apache.commons.fileupload;version=latest,\
+  org.apache.commons.io;version=latest,\
+  org.apache.felix.http.jetty;version=latest,\
+  org.apache.felix.http.servlet-api;version=latest,\
+  org.amdatu.web.filters;version=latest,\
+  org.amdatu.web.rest.doc;version=latest,\
+  org.amdatu.web.rest.jaxrs;version=latest,\
+  org.amdatu.web.rest.wink;version=latest
+
+# Add testing support for web if testing feature is included
+run-blueprint-web-testing: \
+  org.amdatu.web.testing.http;version=latest,\
+  org.amdatu.web.testing.jaxrs;version=latest
+
+-runbundles.blueprint-web-testing: \
+  ${${ifRunFeature;blueprint-testing;run-blueprint-web-testing}}

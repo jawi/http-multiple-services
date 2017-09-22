@@ -1,0 +1,23 @@
+# TODO document
+# TODO Need to carve this up
+
+-runfw: org.apache.felix.framework;version=latest
+-runee: JavaSE-1.8
+
+-runproperties.blueprint-base: \
+    org.ops4j.pax.logging.DefaultServiceLog.level=WARN
+
+-runbundles.blueprint-base: \
+  org.apache.felix.dependencymanager.runtime;version=latest,\
+  org.apache.felix.dependencymanager.shell;version=latest,\
+  org.apache.felix.dependencymanager;version=latest,\
+  org.apache.felix.configadmin;version=latest,\
+  org.apache.felix.eventadmin;version=latest,\
+  org.apache.felix.gogo.command;version=latest,\
+  org.apache.felix.gogo.runtime;version=latest,\
+  org.apache.felix.metatype;version=latest,\
+  org.ops4j.pax.logging.pax-logging-api;version=latest,\
+  org.ops4j.pax.logging.pax-logging-service;version=latest
+
+
+

@@ -1,0 +1,15 @@
+-include: \
+  ${features}/blueprint/run/base.bnd,\
+  ${features}/blueprint/run/config.bnd,\
+  ${features}/blueprint/run/testing.bnd,\
+  ${features}/blueprint/run/web.bnd
+
+-runbundles: \
+  org.apache.felix.gogo.shell;version=latest,\
+  nl.lxtreme.admin;version=latest,\
+  nl.lxtreme.user;version=latest
+
+-runproperties: \
+  org.osgi.service.http.port=-1,\
+  org.osgi.service.http.port.secure=-1,\
+  org.osgi.framework.bootdelegation="sun.*,com.sun.*"

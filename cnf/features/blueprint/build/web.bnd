@@ -1,0 +1,20 @@
+# TODO doc
+-buildpath.blueprint-web: \
+  com.fasterxml.jackson.core.jackson-annotations;version=latest,\
+  com.fasterxml.jackson.core.jackson-core;version=latest,\
+  com.fasterxml.jackson.core.jackson-databind;version=latest,\
+  com.fasterxml.jackson.jaxrs.jackson-jaxrs-base;version=latest,\
+  com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider;version=latest,\
+  org.amdatu.web.rest.doc;version=latest,\
+  org.amdatu.web.rest.jaxrs;version=latest,\
+  org.apache.felix.http.servlet-api;version=latest,\
+  org.osgi.service.http.whiteboard;version=latest,\
+  org.osgi.service.http;version=latest
+
+# Add testing support for web if testing feature is included
+build-blueprint-web-testing: \
+  org.amdatu.web.testing.http;version=latest,\
+  org.amdatu.web.testing.jaxrs;version=latest
+
+-buildpath.blueprint-web-testing: \
+  ${${ifBuildFeature;blueprint-testing;build-blueprint-web-testing}}

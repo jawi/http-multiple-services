@@ -1,0 +1,10 @@
+# TODO doc
+-buildpath.blueprint-mongodb: \
+  org.amdatu.mongo;version=latest
+
+# Add testing support for mongodb if testing feature is included
+build-blueprint-mongodb-testing: \
+  org.amdatu.mongo.testing;version=latest
+
+-buildpath.blueprint-mongodb-testing: \
+  ${${ifBuildFeature;blueprint-testing;build-blueprint-mongodb-testing}}

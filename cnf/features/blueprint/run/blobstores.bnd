@@ -1,0 +1,3 @@
+# TODO document
+-runbundles.blueprint-blobstores: \
+  org.amdatu.blobstores;version=latest

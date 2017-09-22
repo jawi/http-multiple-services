@@ -1,0 +1,15 @@
+# TODO document
+# TODO do we provide jongo (by default)?
+-runbundles.blueprint-mongodb: \
+  com.fasterxml.jackson.core.jackson-annotations;version=latest,\
+  com.fasterxml.jackson.core.jackson-core;version=latest,\
+  com.fasterxml.jackson.core.jackson-databind;version=latest,\
+  de.undercouch.bson4jackson;version=latest,\
+  org.amdatu.mongo;version=latest
+
+# Add testing support for mongodb if testing feature is included
+run-blueprint-mongodb-testing: \
+  org.amdatu.mongo.testing;version=latest
+
+-runbundles.blueprint-mongodb-testing: \
+  ${${ifRunFeature;blueprint-testing;run-blueprint-mongodb-testing}}

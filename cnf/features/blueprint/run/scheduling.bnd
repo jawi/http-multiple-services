@@ -1,0 +1,4 @@
+# TODO document
+-runbundles.blueprint-scheduling: \
+  org.amdatu.scheduling.api;version=latest,\
+  org.amdatu.scheduling.quartz;version=latest
